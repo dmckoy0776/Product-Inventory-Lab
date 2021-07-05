@@ -2,6 +2,9 @@ package models;
 
 public class Candy {
     private int id;
+
+
+
     private String brand;
     private String name;
     private String type;
@@ -15,5 +18,13 @@ public class Candy {
 
     public void setName(String candyName) {
         this.name = candyName;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 }

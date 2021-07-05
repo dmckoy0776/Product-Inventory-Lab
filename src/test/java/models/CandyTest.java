@@ -19,4 +19,19 @@ public class CandyTest {
         Assertions.assertEquals(actualName, expectedName);
 
     }
+
+    @Test
+    public void setBrandTest (){
+        //Given
+        String expectedBrand = "Nestle";
+
+        //When
+        Candy candy = new Candy();
+        candy.setBrand(expectedBrand);
+
+        //Then
+        String actual = candy.getBrand();
+        Assertions.assertEquals(actual, expectedBrand);
+
+    }
 }

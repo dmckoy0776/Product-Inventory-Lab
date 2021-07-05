@@ -8,4 +8,12 @@ public class Candy {
     private String size;
     private int qty;
     private float price;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String candyName) {
+        this.name = candyName;
+    }
 }

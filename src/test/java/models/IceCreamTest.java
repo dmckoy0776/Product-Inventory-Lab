@@ -16,7 +16,7 @@ public class IceCreamTest {
 
         //Then
         String actual = iceCream.getBrand();
-        Assertions.assertEquals(actual, expectedBrand);
+        Assertions.assertEquals(expectedBrand, actual);
 
     }
 
@@ -31,7 +31,7 @@ public class IceCreamTest {
 
         //Then
         String actual = iceCream.getFlavor();
-        Assertions.assertEquals(actual, expectedName);
+        Assertions.assertEquals(expectedName, actual);
 
     }
 
@@ -46,7 +46,7 @@ public class IceCreamTest {
 
         //Then
         String actual = iceCream.getDairyType();
-        Assertions.assertEquals(actual, expectedType);
+        Assertions.assertEquals(expectedType, actual);
 
     }
 
@@ -61,7 +61,7 @@ public class IceCreamTest {
 
         //Then
         int actual = iceCream.getId();
-        Assertions.assertEquals(actual, expectedId);
+        Assertions.assertEquals(expectedId, actual);
 
     }
 
@@ -76,7 +76,7 @@ public class IceCreamTest {
 
         //Then
         float actual = iceCream.getPrice();
-        Assertions.assertEquals(actual, expectedPrice);
+        Assertions.assertEquals(expectedPrice, actual);
 
     }
 
@@ -91,7 +91,30 @@ public class IceCreamTest {
 
         //Then
         int actual = iceCream.getQty();
-        Assertions.assertEquals(actual, expectedQty);
+        Assertions.assertEquals(expectedQty, actual);
+
+    }
+
+    @Test
+    public void constructorTest(){
+        //Given
+        int id = 54 ;
+        String brand = "Ben & Jerry";
+        String flavor = "Phish Food";
+        String dairyType = "non-dairy coconut";
+        float price = 5.50F;
+        int qty = 12;
+
+        //When
+        IceCream testIce = new IceCream(id, brand, flavor, dairyType, price, qty);
+
+        //Then
+        Assertions.assertEquals(id, testIce.getId());
+        Assertions.assertEquals(brand, testIce.getBrand());
+        Assertions.assertEquals(flavor, testIce.getFlavor());
+        Assertions.assertEquals(dairyType, testIce.getDairyType());
+        Assertions.assertEquals(price, testIce.getPrice());
+        Assertions.assertEquals(qty, testIce.getQty());
 
     }
 

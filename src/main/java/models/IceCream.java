@@ -8,6 +8,21 @@ public class IceCream {
     private float price;
     private int qty;
 
+    public IceCream() {
+
+    }
+
+    public IceCream(int id, String brand, String flavor, String dairyType, float price, int qty) {
+        this.id = id;
+        this.brand = brand;
+        this.flavor = flavor;
+        this.dairyType = dairyType;
+        this.price = price;
+        this.qty = qty;
+    }
+
+
+
     public String getBrand() {
         return brand;
     }

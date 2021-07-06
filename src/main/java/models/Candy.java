@@ -9,6 +9,21 @@ public class Candy {
     private int qty;
     private float price;
 
+
+    public Candy() {
+    }
+
+
+    public Candy(int id, String brand, String name, String type, String size, int qty, float price) {
+        this.id = id;
+        this.brand = brand;
+        this.name = name;
+        this.type = type;
+        this.size = size;
+        this.qty = qty;
+        this.price = price;
+    }
+
     public String getName() {
         return name;
     }
@@ -64,4 +79,5 @@ public class Candy {
     public void setPrice(float price) {
         this.price = price;
     }
+
 }

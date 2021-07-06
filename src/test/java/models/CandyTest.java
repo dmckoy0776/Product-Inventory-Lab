@@ -16,7 +16,7 @@ public class CandyTest {
 
         //Then
         String actualName = candy.getName();
-        Assertions.assertEquals(actualName, expectedName);
+        Assertions.assertEquals(expectedName,actualName);
 
     }
 
@@ -31,7 +31,7 @@ public class CandyTest {
 
         //Then
         String actual = candy.getBrand();
-        Assertions.assertEquals(actual, expectedBrand);
+        Assertions.assertEquals(expectedBrand, actual);
 
     }
 
@@ -46,7 +46,7 @@ public class CandyTest {
 
         //Then
         String actual = candy.getType();
-        Assertions.assertEquals(actual, expectedType);
+        Assertions.assertEquals(expectedType, actual);
 
     }
 
@@ -61,7 +61,7 @@ public class CandyTest {
 
         //Then
         String actual = candy.getSize();
-        Assertions.assertEquals(actual, expectedSize);
+        Assertions.assertEquals(expectedSize, actual);
 
     }
 
@@ -76,7 +76,7 @@ public class CandyTest {
 
         //Then
         float actual = candy.getPrice();
-        Assertions.assertEquals(actual, expectedPrice);
+        Assertions.assertEquals(expectedPrice, actual);
 
     }
 
@@ -91,7 +91,7 @@ public class CandyTest {
 
         //Then
         int actual = candy.getQty();
-        Assertions.assertEquals(actual, expectedQty);
+        Assertions.assertEquals(expectedQty, actual);
 
     }
 
@@ -106,7 +106,34 @@ public class CandyTest {
 
         //Then
         int actual = candy.getId();
-        Assertions.assertEquals(actual, expectedId);
+        Assertions.assertEquals(expectedId, actual);
+
+    }
+
+    @Test
+    public void constructorTest() {
+        //Given
+        int id = 32;
+        String brand = "Hershey";
+        String name = "Kisses";
+        String type = "chocolate";
+        String size = "family-size";
+        int qty = 12;
+        float price = 7.99F;
+
+        //When
+        Candy testCandy = new Candy(id, brand, name, type, size, qty, price);
+
+        //Then
+        Assertions.assertEquals(id, testCandy.getId());
+        Assertions.assertEquals(brand, testCandy.getBrand());
+        Assertions.assertEquals(name, testCandy.getName());
+        Assertions.assertEquals(type, testCandy.getType());
+        Assertions.assertEquals(size, testCandy.getSize());
+        Assertions.assertEquals(qty, testCandy.getQty());
+        Assertions.assertEquals(price, testCandy.getPrice());
+
+
 
     }
 }

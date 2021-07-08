@@ -50,20 +50,20 @@ public class IceCreamTest {
 
     }
 
-    @Test
-    public void setIdTest (){
-        //Given
-        int expectedId = 2112;
+//    @Test
+//    public void setIdTest (){
+//        //Given
+//        int expectedId = 2112;
+//
+//        //When
+//        IceCream iceCream = new IceCream();
+//        iceCream.setId(expectedId);
+//
+//        //Then
+//        int actual = iceCream.getId();
+//        Assertions.assertEquals(expectedId, actual);
 
-        //When
-        IceCream iceCream = new IceCream();
-        iceCream.setId(expectedId);
 
-        //Then
-        int actual = iceCream.getId();
-        Assertions.assertEquals(expectedId, actual);
-
-    }
 
     @Test
     public void setPriceTest (){

@@ -17,4 +17,38 @@ public class CandyService {
 
                 return createdCandy;
         }
+
+        public static Candy findCandy(int id) {
+                for (Candy c: inventory) {
+                        if (c.getId()== id){
+                         return c;
+                        }
+                }
+                return null;
+        }
+
+        public static Candy[] findAll() {
+
+                Candy[] candyCopy = new Candy[inventory.size()];
+                for (int i = 0; i < inventory.size(); i++) {
+                  candyCopy[i] = inventory.get(i);
+                }
+           return candyCopy;
+        }
+
+        public boolean delete(int id){
+                for (Candy c: inventory) {
+                        if (c.getId() == id) {
+                         inventory.remove(c);
+                         return true;
+                        }
+                }
+                return false;
+        }
+
+
+
+
+
+        //returns null if candy Id not found
 }

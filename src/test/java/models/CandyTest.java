@@ -95,20 +95,20 @@ public class CandyTest {
 
     }
 
-    @Test
-    public void setIdTest (){
-        //Given
-        int expectedId = 242;
-
-        //When
-        Candy candy = new Candy();
-        candy.setId(expectedId);
-
-        //Then
-        int actual = candy.getId();
-        Assertions.assertEquals(expectedId, actual);
-
-    }
+//    @Test
+//    public void setIdTest (){
+//        //Given
+//        int expectedId = 242;
+//
+//        //When
+//        Candy candy = new Candy();
+//        candy.setId(expectedId);
+//
+//        //Then
+//        int actual = candy.getId();
+//        Assertions.assertEquals(expectedId, actual);
+//
+//    }
 
     @Test
     public void constructorTest() {

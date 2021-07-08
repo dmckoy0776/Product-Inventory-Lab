@@ -4,6 +4,8 @@ import models.Candy;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 public class CandyServiceTest {
 
     @Test
@@ -41,4 +43,60 @@ public class CandyServiceTest {
 
     }
 
+    @Test
+    public void findCandyTest(){
+        //Given
+        int expectedId = 1;
+        String brand = "Mars";
+        String name = "Skittles";
+        String type = "fruity";
+        String size = "family-size";
+        int qty = 35;
+        float price = 7.99F;
+
+        //When
+        Candy testSkittles = CandyService.create(brand, name, type, size, qty, price);
+        Candy testFind = CandyService.findCandy(1);
+
+        //Then
+        Assertions.assertEquals(testFind, testSkittles);
+        Assertions.assertEquals("Skittles", testFind.getName());
+
+    }
+    @Test
+    public void findCandyTest2(){
+        //Given
+        int expectedId = 6;
+        String brand = "Mars";
+        String name = "Skittles";
+        String type = "fruity";
+        String size = "family-size";
+        int qty = 35;
+        float price = 7.99F;
+
+        //When
+        Candy testSkittles = CandyService.create(brand, name, type, size, qty, price);
+        Candy testFind = CandyService.findCandy(1);
+
+        //Then
+        Assertions.assertEquals(testFind, testSkittles);
+
+    }
+
+    @Test
+    public void findAllTest(){
+        //Given
+
+        Candy candy1 = CandyService.create("Hershey", "Reeses", "chocolate", "fun-size", 23, 2.00F);
+        Candy candy2 = CandyService.create("Mars", "Starburst", "fruity", "full-size", 70, 2.00F);
+        Candy[] expected = {candy1, candy2};
+
+        //When
+        Candy[] actual = CandyService.findAll();
+
+
+        //Then
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
 }

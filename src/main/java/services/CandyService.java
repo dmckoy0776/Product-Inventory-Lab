@@ -36,7 +36,7 @@ public class CandyService {
            return candyCopy;
         }
 
-        public boolean delete(int id){
+        public static boolean delete(int id){
                 for (Candy c: inventory) {
                         if (c.getId() == id) {
                          inventory.remove(c);

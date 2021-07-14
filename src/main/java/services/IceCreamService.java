@@ -17,4 +17,32 @@ public class IceCreamService {
 
         return createdIceCream;
     }
+
+    public static IceCream findCream(int id) {
+        for (IceCream ice: inventory) {
+            if (ice.getId()== id){
+                return ice;
+            }
+        }
+        return null;
+    }
+
+    public static IceCream[] findAll() {
+
+        IceCream[] creamCopy = new IceCream[inventory.size()];
+        for (int i = 0; i < inventory.size(); i++) {
+            creamCopy[i] = inventory.get(i);
+        }
+        return creamCopy;
+    }
+
+    public static boolean delete(int id){
+        for (IceCream ice: inventory) {
+            if (ice.getId() == id) {
+                inventory.remove(ice);
+                return true;
+            }
+        }
+        return false;
+    }
 }

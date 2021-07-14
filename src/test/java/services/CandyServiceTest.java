@@ -107,15 +107,17 @@ public class CandyServiceTest {
         Candy candy1 = CandyService.create("Hershey", "Reeses", "chocolate", "fun-size", 23, 2.00F);
         Candy candy2 = CandyService.create("Mars", "Starburst", "fruity", "full-size", 70, 2.00F);
         Candy candy3 = CandyService.create("Trolli", "GummiWorms", "gummy", "fun-size", 45, 5.00F);
-        Candy[] expected = {candy1, candy2, candy3};
+        Candy[] expected = {candy1, candy3};
 
         //When
         boolean actual = CandyService.delete(2);
+        Candy[] productsLeft = CandyService.findAll();
 
 
 
         //Then
         Assertions.assertTrue(actual);
+        Assertions.assertArrayEquals(expected, productsLeft);
 
     }
 
